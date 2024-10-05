@@ -162,7 +162,7 @@
     }
 }
 @media screen and (max-width: 350px){
-    home__title{
+    .home__title{
         font-size:2rem;
     }
     .home__img{
