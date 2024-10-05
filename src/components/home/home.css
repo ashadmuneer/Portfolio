@@ -162,6 +162,9 @@
     }
 }
 @media screen and (max-width: 350px){
+    home__title{
+        font-size:2rem;
+    }
     .home__img{
          width: 180px;
          height: 180px;
