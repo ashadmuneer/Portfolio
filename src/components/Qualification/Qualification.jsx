@@ -10,7 +10,7 @@ const Qualification = () => {
     }
 
   return (
-    <section className="qualification section">
+    <section className="qualification section" id="qualification">
         <h2 className="section__title">Qualification</h2>
         <span className="section__subtitle">My Personal Journey</span>
             <div className="qualification__conatiner container">
@@ -75,7 +75,7 @@ const Qualification = () => {
                         <div className="qualification__data">
                             <div>
                                 <h3 className="qualification__title">
-                                B.Tech Information Technology
+                                B.Tech in Computer Science and Engineering
                                 </h3>
                                 <span className="qualification__subtitle">
                                 ABES Engineering College, Uttar Pradesh

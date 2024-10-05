@@ -2,12 +2,24 @@
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   column-gap: 4rem;
+  display: grid;
+
+  gap: 2rem;
+
 }
-.about__img {
+/* .about__img {
   width: 370px;
   height: 360px;
   border-radius: 1.5rem;
   justify-self: center;
+} */
+.about__img {
+  width: 100%;
+  max-width: 400px; /* Limit the max width to prevent it from getting too large */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 1.5rem;
+  justify-self: center; /* Optional: Adds a slight rounding to the corners */
+  object-fit: cover; /* Optional: Ensures the image covers the available space without distortion */
 }
 .about__info {
   grid-template-columns: repeat(3, 140px);
@@ -42,8 +54,10 @@
 /* For large devices */
 @media screen and (max-width: 992px) {
   .about__container {
-    grid-template-columns: 1fr;
-    row-gap: 2.5rem;
+    /* grid-template-columns: 1fr;
+    row-gap: 2.5rem; */
+    grid-template-columns: 1fr; /* Stack the image and content on smaller screens */
+    text-align: center;
   }
   .about__img {
     width: 220px;
