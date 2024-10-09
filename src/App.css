@@ -244,9 +244,13 @@ img {
   .section {
     padding: 2rem 0 4rem;
   }
+  .section__title {
+    margin-left: 36px;
 
+  }
   .section__subtitle {
     margin-bottom: var(--mb-3);
+    margin-left: 32px;
   }
 
   /* Responsive Grid for smaller screens */
