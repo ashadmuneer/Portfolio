@@ -124,7 +124,7 @@ const Qualification = () => {
                                 <span className="qualification__line"></span>
                             </div>
                             
-                            <div>
+                            <div className='intern2'>
                                 <h3 className="qualification__title">
                                     UI/UX Intern
                                 </h3>

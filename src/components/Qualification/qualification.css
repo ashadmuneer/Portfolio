@@ -76,6 +76,9 @@
  
   
   @media screen and (max-width: 576px) {
+    .intern2{
+        margin-left: 2px;
+    }
     .qualification__sections{
         grid-template-columns: 1fr;
     }

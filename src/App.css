@@ -250,7 +250,7 @@ img {
   }
   .section__subtitle {
     margin-bottom: var(--mb-3);
-    margin-left: 32px;
+    margin-left: 35px;
   }
 
   /* Responsive Grid for smaller screens */
