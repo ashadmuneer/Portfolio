@@ -1,21 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import "./header.css";
+import './header.css';
 
-// =============== Toggle Menu =================
 const Header = () => {
-    const [Toggle, setToggle] = useState(false);
+    const [toggle, setToggle] = useState(false);
     const [darkMode, setDarkMode] = useState(false);
 
     useEffect(() => {
         const body = document.body;
-        const toggle = document.querySelector('.toggle-inner');
+        const toggleElement = document.querySelector('.toggle-inner');
 
-        if (darkMode === true) {
+        if (darkMode) {
             body.classList.add('dark-mode');
-            toggle.classList.add('toggle-active');
+            toggleElement.classList.add('toggle-active');
         } else {
             body.classList.remove('dark-mode');
-            toggle.classList.remove('toggle-active');
+            toggleElement.classList.remove('toggle-active');
         }
     }, [darkMode]);
 
@@ -23,55 +22,33 @@ const Header = () => {
         <header className="header">
             <nav className="nav container">
                 <a href="index.html" className="nav__logo">&lt;/Ashad.&gt;</a>
-                <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
-                    <ul className="nav__list grid">
+                <div className={toggle ? "nav__menu show-menu" : "nav__menu"}>
+                    <ul className="nav__list">
                         <li className="nav__item">
-                            <a href="#home" className="nav__link active-link">
-                                <i className="uil uil-estate nav__icon"></i>
-                                Home
-                            </a>
+                            <a href="#home" className="nav__link active-link">Home</a>
                         </li>
                         <li className="nav__item">
-                            <a href="#about" className="nav__link">
-                                <i className="uil uil-user nav__icon"></i>
-                                About
-                            </a>
+                            <a href="#about" className="nav__link">About</a>
                         </li>
                         <li className="nav__item">
-                            <a href="#skills" className="nav__link">
-                                <i className="uil uil-file-alt nav__icon"></i>
-                                Skill
-                            </a>
-                        </li>
-                        {/* <li className="nav__item">
-                            <a href="#project" className="nav__link">
-                                <i className="uil uil-briefcase nav__icon"></i>
-                                Project
-                            </a>
-                        </li> */}
-                        {/* Qualification link added here */}
-                        <li className="nav__item">
-                            <a href="#qualification" className="nav__link">
-                                <i className="uil uil-scenery nav__icon"></i>
-                                Qualification
-                            </a>
+                            <a href="#skills" className="nav__link">Skill</a>
                         </li>
                         <li className="nav__item">
-                            <a href="#contact" className="nav__link">
-                                <i className="uil uil-message nav__icon"></i>
-                                Contact
-                            </a>
+                            <a href="#qualification" className="nav__link">Qualification</a>
+                        </li>
+                        <li className="nav__item">
+                            <a href="#contact" className="nav__link">Contact</a>
                         </li>
                     </ul>
 
-                    <i className="uil uil-times nav__close" onClick={() => setToggle(!Toggle)}></i>
+                    <i className="uil uil-times nav__close" onClick={() => setToggle(!toggle)}></i>
                 </div>
                 <div className="themechange nav__logo">
-                    <div id="toggle" onClick={() => darkMode === false ? setDarkMode(true) : setDarkMode(false)}>
+                    <div id="toggle" onClick={() => setDarkMode(!darkMode)}>
                         <div className="toggle-inner" />
                     </div>
                 </div>
-                <div className="nav__toggle" onClick={() => setToggle(!Toggle)}>
+                <div className="nav__toggle" onClick={() => setToggle(!toggle)}>
                     <i className="uil uil-apps nav__close"></i>
                 </div>
             </nav>

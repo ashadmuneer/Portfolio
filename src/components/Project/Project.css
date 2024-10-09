@@ -1,0 +1,161 @@
+/* Gallery.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Project.css */
+/* Project Section Styles */
+.project-section {
+  width: 100%; /* Full width */
+  max-width: 1200px; /* Set a max width for the section */
+  margin: 0 auto; /* Center the section */
+  padding: 20px; /* Padding around the section */
+  overflow: hidden; /* Hide overflow */
+}
+
+/* Slider Container */
+.project-slider {
+  width: 80%; /* Set width for the slider */
+  max-width: 1200px; /* Set a max width for the slider */
+  margin: 0 auto; /* Center the slider on the page */
+  overflow: hidden;
+  position: relative;
+}
+
+/* Slider Styles */
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 20px; /* Space between the cards */
+}
+
+/* Slider Card Styles */
+.slider-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  background-color: white;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+  flex: 0 0 auto; /* Prevent card from expanding too much */
+  margin: 0 10px; /* Consistent spacing between cards */
+}
+
+/* Hover effect for slider cards */
+.slider-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+/* Dark Mode Styling */
+body.dark-mode {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+.dark-mode .slider-card {
+  background-color: #1e1e1e; /* Dark background for cards */
+  color: #f5f5f5; /* Light text in dark mode */
+}
+
+.dark-mode .slider-card h4,
+.dark-mode .slider-card p {
+  color: #ffffff; /* Ensure text is visible in dark mode */
+}
+
+.dark-mode .slider-card a {
+  background-color: var(--title-color);
+  color: var(--container-color);
+}
+
+.dark-mode .slider-card a:hover {
+  background-color: var(--title-color-dark);
+}
+
+/* Arrow Button Styling */
+.arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--title-color);
+  color: var(--container-color);
+  height: 2.5rem; /* Set the height of the button */
+  width: 2.5rem; /* Set the width of the button */
+  padding: 0.75rem 1rem; /* Adjusted padding for balance */
+  border-radius: 0.75rem; /* Adjusted border radius */
+  font-weight: var(--font-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.arrow-btn:hover {
+  background-color: var(--title-color-dark); /* Darker color on hover */
+}
+
+.left-arrow {
+  left: 20px; /* Position for left arrow */
+}
+
+.right-arrow {
+  right: 20px; /* Position for right arrow */
+}
+.card-btn{
+  background-color: var(--title-color);
+  color: var(--container-color);
+  transition: background-color 0.3s ease;
+}
+.card-btn:hover{
+  background-color: var(--title-color-dark);
+}
+
+
+/* Responsive Design Adjustments */
+@media (max-width: 639px) {
+  .slider-card {
+    width: 90%; /* One card on small mobile screens */
+    margin: 0 auto; /* Center the card */
+  }
+
+  .arrow-btn {
+    display: none; /* Hide arrows on mobile */
+  }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+  .slider-card {
+    width: 70%; /* Two cards on small tablets */
+    margin: 0 auto; /* Center the cards */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .slider-card {
+    width: 48%; /* Two cards on medium tablets and small laptops */
+  }
+}
+
+@media (min-width: 1024px) {
+  .slider-card {
+    width: 30%; /* Three cards on large screens */
+  }
+
+  .arrow-btn {
+    padding: 12px; /* Adjust padding for larger screens */
+  }
+}
+
+/* For better visual spacing on larger screens */
+@media (min-width: 1200px) {
+  .slider-card {
+    margin: 0 0px; /* Increased spacing between cards */
+  }
+}
+
+
+
+
+
+  
+  
