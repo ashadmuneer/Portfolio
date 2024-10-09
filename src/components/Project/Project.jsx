@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./Project.css";
 
 const Project = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [expanded, setExpanded] = useState(Array(5).fill(false)); // Track expanded state for each project
@@ -58,10 +57,7 @@ const Project = () => {
     },
   ];
 
-  // Toggle Dark Mode
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
+
 
   // Handle automatic sliding and resize for responsiveness
   useEffect(() => {
