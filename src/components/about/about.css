@@ -1,31 +1,29 @@
 .about__container {
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   column-gap: 4rem;
-  display: grid;
-
   gap: 2rem;
-
 }
-/* .about__img {
-  width: 370px;
-  height: 360px;
-  border-radius: 1.5rem;
-  justify-self: center;
-} */
+
+/* Image Styles */
 .about__img {
   width: 100%;
   max-width: 400px; /* Limit the max width to prevent it from getting too large */
   height: auto; /* Maintain aspect ratio */
-  border-radius: 1.5rem;
-  justify-self: center; /* Optional: Adds a slight rounding to the corners */
-  object-fit: cover; /* Optional: Ensures the image covers the available space without distortion */
+  border-radius: 1.5rem; /* Rounding the corners */
+  justify-self: center; /* Center the image horizontally */
+  object-fit: cover; /* Ensure the image covers the available space without distortion */
 }
+
+/* About Info Styles */
 .about__info {
+  display: grid;
   grid-template-columns: repeat(3, 140px);
   gap: 0.5rem;
   margin-bottom: var(--mb-2);
 }
+
 .about__box {
   background-color: var(--container-color);
   border: 1px solid var(--border-color);
@@ -33,63 +31,93 @@
   text-align: center;
   padding: 1rem 1.25rem;
 }
+
 .about__icon {
   font-size: 1.5rem;
   color: var(--title-color);
   margin-bottom: var(--mb-0-5);
 }
+
 .about__title {
   font-size: var(--small-font-size);
   font-weight: var(--font-medium);
 }
+
 .about__subtitle {
   font-size: var(--tiny-font-size);
 }
+
 .about__description {
   padding: 0 4rem 0 0;
   margin-bottom: var(--mb-2-5);
 }
 
 /*=============== BREAKPOINTS ===============*/
-/* For large devices */
+
+/* For large devices (max-width: 992px) */
 @media screen and (max-width: 992px) {
   .about__container {
-    /* grid-template-columns: 1fr;
-    row-gap: 2.5rem; */
     grid-template-columns: 1fr; /* Stack the image and content on smaller screens */
     text-align: center;
+    row-gap: 2rem; /* Add more vertical spacing between the stacked elements */
   }
   .about__img {
-    width: 220px;
-    height: 390px;
+    width: 80%; /* Scale image for large devices */
+    max-width: 300px;
+    height: auto;
   }
-  .about__box {
-    padding: 0.75rem 0.5rem;
-  }
-  .about__data {
-    text-align: center;
+  .about__description {
+    padding: 0 3rem;
   }
   .about__info {
     justify-content: center;
   }
+}
+
+/* For medium devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .about__img {
+    width: 70%; /* Further scale down image */
+    max-width: 280px;
+    height: auto;
+  }
   .about__description {
-    padding: 0 5rem;
-    margin-bottom: 2rem;
+    padding: 0 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .about__info {
+    grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns for medium devices */
   }
 }
 
-/* For medium devices */
+/* For small devices (max-width: 576px) */
 @media screen and (max-width: 576px) {
-  .about__info {
-    grid-template-columns: repeat(3, 1fr);
+  .about__container {
+    row-gap: 1.5rem;
+    text-align: center;
+  }
+  .about__img {
+    width: 60%; /* Scale down image more */
+    max-width: 240px;
   }
   .about__description {
-    padding: 0;
+    padding: 0 1.5rem;
+  }
+  .about__info {
+    grid-template-columns: repeat(2, 1fr); /* Display two columns of info on small screens */
   }
 }
-/* For small devices */
+
+/* For extra small devices (max-width: 350px) */
 @media screen and (max-width: 350px) {
+  .about__img {
+    width: 50%; /* Smaller image for very small devices */
+    max-width: 180px;
+  }
   .about__info {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr); /* Switch to one column on extra small screens */
+  }
+  .about__description {
+    padding: 0 1rem;
   }
 }

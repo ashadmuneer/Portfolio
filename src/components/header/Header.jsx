@@ -34,6 +34,9 @@ const Header = () => {
                             <a href="#skills" className="nav__link">Skill</a>
                         </li>
                         <li className="nav__item">
+                            <a href="#Projects" className="nav__link">Projects</a>
+                        </li>
+                        <li className="nav__item">
                             <a href="#qualification" className="nav__link">Qualification</a>
                         </li>
                         <li className="nav__item">
