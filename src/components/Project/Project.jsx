@@ -98,12 +98,12 @@ const Project = () => {
   };
 
   return (
-    <section className={`project-section ${isDarkMode ? "dark-mode" : ""}`}>
+    <section className={`project-section `}>
       <h2 className="section__title">Projects</h2>
       <span className="section__subtitle">My Various Projects</span>
 
       <div
-        className={`p-4 pb-0 overflow-hidden ${isDarkMode ? "dark-mode" : ""}`}
+        className={`p-4 pb-0 overflow-hidden `}
       >
         <div className="flex items-center justify-center relative w-full project-container">
           {/* Left Arrow (Hidden on Mobile) */}
