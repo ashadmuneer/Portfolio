@@ -8,6 +8,14 @@ const Project = () => {
 
   const projects = [
     {
+      title: "PopCart",
+      imageLink: "https://i.imgur.com/04PFn8g.png",
+      description:
+        "Pop Crat is a fashion e-commerce platform developed with React, Node.js, Express, and MongoDB. It incorporates Redux for state management, JWT for secure authentication, Tailwind CSS for styling, Cloudinary for media handling, and PayPal for seamless, secure payments.",
+      link1: "https://github.com/ashadmuneer/PopCart",
+      link2: "https://popcart-howm.onrender.com/"
+    },
+    {
       title: "ChitChat",
       imageLink: "https://i.imgur.com/gjdhqHw.png",
       description:
