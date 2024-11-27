@@ -10,7 +10,6 @@ const Chatbot = () => {
     onSent,
     loading,
     darkMode,           
-    toggleDarkMode,     // Added toggleDarkMode from context
   } = useContext(Context);
 
   const [isChatboxOpen, setIsChatboxOpen] = useState(false);

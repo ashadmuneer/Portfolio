@@ -1,7 +1,6 @@
 import {
   GoogleGenerativeAI,
-  HarmCategory,
-  HarmBlockThreshold,
+  
 } from "@google/generative-ai";
 
 const apiKey = process.env.REACT_APP_GOOGLE_API_KEY;
@@ -23,23 +22,23 @@ const oneTimeString = `My name is Ashad Muneer, a final-year B.Tech student in C
 I have worked on notable projects, including 'Vajra,' an emergency solutions platform; 'ChitChat,' a real-time chat app; and 'Pop Crat,' a fashion e-commerce platform. My UI/UX projects include 'Perpetual,' a web trading platform, and a food delivery app. I have won awards such as first place in the college's internal Smart India Hackathon and 8th place in an inter-college hackathon at Bennett University.
 I hold certifications in areas like API development, UX design, and cloud foundations and have participated as a mentor in programs like GSSOC'24. I enjoy designing responsive and user-centric applications and am passionate about delivering creative solutions. My portfolio and work can be found on https://github.com/ashadmuneer  and https://ashadmuneer.netlify.app/ .You can reach me via email at ashadmuneerofficial@gmail.com, Linkdin https://www.linkedin.com/in/ashad-muneer/ and I also maintain a personal website at ashadmuneer.netlify.app.`;
 
-function assessHarm(harmReport) {
-  const harmCategories = [
-    { category: "Hate Speech", threshold: 3, message: "Hate speech detected. Account may be suspended." },
-    { category: "Violence", threshold: 1, message: "Violent content detected. Content removed and account flagged." },
-    { category: "Spam", threshold: 10, message: "Excessive spam detected. Account may be temporarily banned." },
-    { category: "Misinformation", threshold: 5, message: "Significant misinformation detected. Content flagged for review."}
-  ];
+// function assessHarm(harmReport) {
+//   const harmCategories = [
+//     { category: "Hate Speech", threshold: 3, message: "Hate speech detected. Account may be suspended." },
+//     { category: "Violence", threshold: 1, message: "Violent content detected. Content removed and account flagged." },
+//     { category: "Spam", threshold: 10, message: "Excessive spam detected. Account may be temporarily banned." },
+//     { category: "Misinformation", threshold: 5, message: "Significant misinformation detected. Content flagged for review."}
+//   ];
 
-  // Assess if the harm report exceeds the threshold
-  for (const category of harmCategories) {
-    if (harmReport.category === category.category && harmReport.count >= category.threshold) {
-      return category.message;
-    }
-  }
+//   // Assess if the harm report exceeds the threshold
+//   for (const category of harmCategories) {
+//     if (harmReport.category === category.category && harmReport.count >= category.threshold) {
+//       return category.message;
+//     }
+//   }
 
-  return "No action required."; // Default message if no threshold is exceeded.
-}
+//   return "No action required."; // Default message if no threshold is exceeded.
+// }
 
 async function run(prompt) {
   // Example harm report that could be checked (you can replace this with actual reports)
