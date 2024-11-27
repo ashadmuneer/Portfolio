@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { Context } from '../../context/Context'; 
 import './header.css';
 
 const Header = () => {
     const [toggle, setToggle] = useState(false);
-    const [darkMode, setDarkMode] = useState(false);
+    const { darkMode, toggleDarkMode } = useContext(Context); 
 
     useEffect(() => {
         const body = document.body;
@@ -46,11 +47,13 @@ const Header = () => {
 
                     <i className="uil uil-times nav__close" onClick={() => setToggle(!toggle)}></i>
                 </div>
+
                 <div className="themechange nav__logo">
-                    <div id="toggle" onClick={() => setDarkMode(!darkMode)}>
+                    <div id="toggle" onClick={toggleDarkMode}> {/* Use toggleDarkMode from context */} 
                         <div className="toggle-inner" />
                     </div>
                 </div>
+
                 <div className="nav__toggle" onClick={() => setToggle(!toggle)}>
                     <i className="uil uil-apps nav__close"></i>
                 </div>
