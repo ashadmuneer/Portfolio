@@ -56,14 +56,7 @@ async function run(prompt) {
         role: "user", 
         parts: [{ text: oneTimeString }] // Wrap content in 'parts' as an array
       },
-      { 
-        role: "user", 
-        parts: [{ text: "i want give you a name and call with that name only" }] // Wrap content in 'parts' as an array
-      },
-      { 
-        role: "user", 
-        parts: [{ text: "Hello! I'm Ashad Ai, how can I assist you today?'" }] // Wrap content in 'parts' as an array
-      },
+      
     ],
   });
 
