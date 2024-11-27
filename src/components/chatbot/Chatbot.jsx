@@ -21,7 +21,7 @@ const Chatbot = () => {
       setPrevPrompts([
         {
           id: "welcome-msg",
-          text: "Hello! How can I assist you today?",
+          text: "Hello! How can I assist you today? I'm Ashad Muneer, and I can share details about my skills, projects, certifications, and achievements if you're interested.",
           sender: "bot",
         },
       ]);
@@ -76,7 +76,10 @@ const Chatbot = () => {
       {isChatboxOpen && (
         <div
           className={`fixed bottom-[8rem] lg:bottom-[6rem] right-4 w-[90%] max-w-sm sm:max-w-xs md:max-w-md lg:max-w-lg lg:right-4 xl:max-w-xl xl:right-4 ${darkMode ? 'dark' : ''}`}
-          style={{ maxWidth: "400px" }}
+          style={{
+            maxWidth: "400px",
+            zIndex: 9999,  // Ensure chatbot is on top of other components
+          }}
         >
           <div className={`shadow-md rounded-lg w-full ${darkMode ? 'bg-[hsl(0,0%,20%)]' : 'bg-white'}`}>
             {/* Header */}
@@ -120,15 +123,7 @@ const Chatbot = () => {
                   className={`mb-2 ${message.sender === "user" ? "text-right" : "text-left"}`}
                 >
                   <p
-                    className={`py-2 px-4 inline-block rounded-lg ${
-                      message.sender === "user"
-                        ? darkMode
-                          ? "bg-[rgb(0_0_0_/_97%)] text-white"
-                          : "bg-[hsl(0,0%,20%)] text-white"
-                        : darkMode
-                        ? "bg-gray-700 text-gray-300"
-                        : "bg-gray-200 text-gray-700"
-                    }`}
+                    className={`py-2 px-4 inline-block rounded-lg ${message.sender === "user" ? (darkMode ? "bg-[rgb(0_0_0_/_97%)] text-white" : "bg-[hsl(0,0%,20%)] text-white") : (darkMode ? "bg-gray-700 text-gray-300" : "bg-gray-200 text-gray-700")}`}
                     style={{
                       textAlign: message.sender === "user" ? "right" : "left",
                       wordWrap: "break-word",
