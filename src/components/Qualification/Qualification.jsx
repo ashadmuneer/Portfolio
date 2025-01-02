@@ -126,14 +126,14 @@ const Qualification = () => {
                             
                             <div className='intern2'>
                                 <h3 className="qualification__title">
-                                    UI/UX Intern
+                                Frontend Development Intern
                                 </h3>
                                 <span className="qualification__subtitle">
                                     KnowYourColleges.com
                                 </span>
                                 <div className="qualification__calendar">
                                     <i className="uil uil-calendar-alt"></i>
-                                    2023-2024
+                                    June 2024 – Sept 2024
                                 </div>
                             </div>
                         </div>
