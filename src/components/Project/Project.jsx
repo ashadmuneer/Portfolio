@@ -16,12 +16,12 @@ const Project = () => {
       link2: "https://popcart-howm.onrender.com/"
     },
     {
-      title: "ChitChat",
+      title: "ChatMate",
       imageLink: "https://i.imgur.com/gjdhqHw.png",
       description:
-        "ChitChat is a dynamic real-time chat application that enhances communication through a sleek, user-friendly interface. Built with React.js and Firebase, this application allows users to engage in seamless conversations, share media, and express emotions with ease.",
-      link1: "https://github.com/ashadmuneer/Chit-Chat",
-      link2: "https://chit-chatreactapp.netlify.app/"
+        "ChatMate is a dynamic real-time chat application that enhances communication through a sleek, user-friendly interface. Built with React.js and Firebase, this application allows users to engage in seamless conversations, share media, and express emotions with ease.",
+      link1: "https://github.com/ashadmuneer/ChatMate",
+      link2: "https://chatmate-justchat.netlify.app/"
     },
     {
       title: "Vajra",
