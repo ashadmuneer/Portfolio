@@ -13,7 +13,7 @@ const Project = () => {
       description:
         "Pop Crat is a fashion e-commerce platform developed with React, Node.js, Express, and MongoDB. It incorporates Redux for state management, JWT for secure authentication, Tailwind CSS for styling, Cloudinary for media handling, and PayPal for seamless, secure payments.",
       link1: "https://github.com/ashadmuneer/PopCart",
-      link2: "ashadresume.pdf"
+      link2: "https://ashad.online"
     },
     {
       title: "ChatMate",
