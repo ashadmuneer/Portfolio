@@ -6,9 +6,9 @@ const Data = () => {
     <div className="home__data">
         <h1 className="home__title" >Ashad Muneer 
       </h1>
-      <h3 className="home__subtitle">Frontend Developer | UI/UX Designer </h3>
+      <h3 className="home__subtitle">Fullstack Developer | UI/UX Designer </h3>
       <p className="home__description">
-      A Frontend Web Developer, a Software Engineer and a Designer driven by the challenge of solving intricate problems and creating polished and practical solutions.
+      A Fullstack Developer Web Developer, a Software Engineer and a Designer driven by the challenge of solving intricate problems and creating polished and practical solutions.
       </p>
 
       <a href="#contact" className="button button--flex">
