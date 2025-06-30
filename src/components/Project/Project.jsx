@@ -7,14 +7,14 @@ const Project = () => {
   const [expanded, setExpanded] = useState(Array(5).fill(false)); // Track expanded state for each project
 
   const projects = [
-    // {
-    //   title: "PopCart",
-    //   imageLink: "https://i.imgur.com/04PFn8g.png",
-    //   description:
-    //     "Pop Crat is a fashion e-commerce platform developed with React, Node.js, Express, and MongoDB. It incorporates Redux for state management, JWT for secure authentication, Tailwind CSS for styling, Cloudinary for media handling, and PayPal for seamless, secure payments.",
-    //   link1: "https://github.com/ashadmuneer/PopCart",
-    //   link2: "#"
-    // },
+    {
+      title: "PopCart",
+      imageLink: "https://i.imgur.com/04PFn8g.png",
+      description:
+        "Pop Crat is a fashion e-commerce platform developed with React, Node.js, Express, and MongoDB. It incorporates Redux for state management, JWT for secure authentication, Tailwind CSS for styling, Cloudinary for media handling, and PayPal for seamless, secure payments.",
+      link1: "https://github.com/ashadmuneer/PopCart",
+      link2: "https://ashad.online"
+    },
     {
       title: "ChatMate",
       imageLink: "https://i.imgur.com/gjdhqHw.png",
